@@ -1,0 +1,11 @@
+django
+efficientnet-pytorch
+torch 
+torchvision 
+pillow
+gunicorn
+whitenoise
+python-dotenv
+django-environ
+tqdm
+opencv-python

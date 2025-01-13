@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnosis Result</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f8f6;
+            background-image: url("static/media/background.jpg"); /* Medical texture background */
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-repeat: repeat;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.8); /* Slightly transparent background for better readability */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            width: 450px;
+            text-align: center;
+            padding: 30px;
+            backdrop-filter: blur(10px); /* Adds blur effect to the background */
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .result-box {
+            margin: 20px 0;
+            padding: 20px;
+            border: 2px solid #4CAF50;
+            background: #f9f9f9;
+            border-radius: 5px;
+        }
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .uploaded-image {
+            margin-top: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .uploaded-image img {
+            width: 70%;
+            border-radius: 5px;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Diagnosis Result</h1>
+        <div class="result-box">
+            <p><strong>Diagnosed Disease:</strong> {{ predicted_class }}</p>
+        </div>
+        <div class="uploaded-image">
+            <img src="{{ image_url }}" alt="Uploaded Image">
+        </div>
+        <a href="/"><button><i class="fas fa-arrow-left"></i> Check Another Image</button></a>
+    </div>
+</body>
+</html>
