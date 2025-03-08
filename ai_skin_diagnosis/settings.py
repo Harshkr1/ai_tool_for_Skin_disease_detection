@@ -25,7 +25,8 @@ environ.Env.read_env()
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # Set the SECRET_KEY using the environment variable
-SECRET_KEY = env('DJANGO_SECRET_KEY')
+#here we are manually setting the secret key which is not a good 
+SECRET_KEY = "Bb6yrMctYUBre7JDJMg_hTkLCc-jAmS6SZu0xQah37KxTrNhhgVUxqKLkJZIcOWLCzg"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True

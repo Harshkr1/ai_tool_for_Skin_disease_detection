@@ -1,0 +1,11 @@
+python -m venv myenv
+source myenv/bin/activate  # For macOS/Linux
+myenv\Scripts\activate     # For Windows
+pip install -r requirements.txt'
+
+//only to be done for the first timw ehn we need to migrate the DJango process here
+python manage.py makemigrations
+python manage.py migrate
+
+//to run project
+python manage.py runserver
